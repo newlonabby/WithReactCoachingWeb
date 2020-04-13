@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
+//import { Navbar, NavbarBrand } from 'reactstrap'; whatever reactstrap commponents
 import './App.css';
 
 function App() {
