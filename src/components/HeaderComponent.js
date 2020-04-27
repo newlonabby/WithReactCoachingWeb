@@ -1,25 +1,14 @@
 import React from 'react';
-import {Navbar, NavLink, NavItem, NavbarBrand} from 'reactstrap';
+import { Navbar, NavbarBrand } from 'reactstrap';
 
-
-  const HeaderComponent = (props) => {
-    return(
-        <div>
-            <Navbar>
-            <NavbarBrand href="/home">Coaching</NavbarBrand>
-                <NavItem>
-                    <NavLink href="/home">Home</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/about">Home</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/contact">Home</NavLink>
-                </NavItem>
-            </Navbar>
-        </div>
-
+//to add title prop later
+const Header = props =>  {
+    return (
+        <Navbar color="light" light expand="md">
+            <NavbarBrand href="/">Brand Name</NavbarBrand>
+        </Navbar>
+        
     )
-  }
+}
 
-  export default HeaderComponent;
+export default Header;
