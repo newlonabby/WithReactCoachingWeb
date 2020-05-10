@@ -1,124 +1,44 @@
 import React, { Component } from 'react';
-//import  {Label, Col, Row } from 'reactstrap';
+import  {Label, FormGroup, Form, Input, Button, Col, Row, FormText } from 'reactstrap';
 
-//using controlled form 
+//using controlled form for right now
 
 class SetUpOptions extends Component {
-    constructor(props) {
-        super(props);
-    }
     render(){
         return (
-            //Uncontrolled form for now
-            <form className="container">
-                <div> How Many Options Are You Deciding Between??</div>
-                <div className="form-check">  
-                    <label>
-                        <input
-                        type="radio"
-                        name="decisionNum"
-                        value="twoDecide"
-                        checked={true}
-                        className="form-check-input"
-                        />
-                        2
-                    </label>
-                    </div>
-
-                    <div className="form-check">
-                    <label>
-                        <input
-                        type="radio"
-                        name="decisionNum"
-                        value="threeDecide"
-                        className="form-check-input"
-                        />
-                        3 
-                    </label>
-                    </div>
-
-                    <div className="form-check">
-                    <label>
-                        <input
-                        type="radio"
-                        name="decisionNum"
-                        value="fourDecide"
-                        className="form-check-input"
-                        />
-                        4 
-                    </label>
-                    </div>
-
-                    <div> How Many Users?</div>
-                    <div className="form-check">  
-                    <label>
-                        <input
-                        type="radio"
-                        name="userNum"
-                        value="twoUser"
-                        checked={true}
-                        className="form-check-input"
-                        />
-                        2
-                    </label>
-                    </div>
-
-                    <div className="form-check">
-                    <label>
-                        <input
-                        type="radio"
-                        name="userNum"
-                        value="threeUser"
-                        className="form-check-input"
-                        />
-                        3 
-                    </label>
-                    </div>
-
-                    <div className="form-check">
-                    <label>
-                        <input
-                        type="radio"
-                        name="userNum"
-                        value="fourUser"
-                        className="form-check-input"
-                        />
-                        4 
-                    </label>
-                    </div>
-
-                    <div className="form-check">
-                    <label>
-                        <input
-                        type="radio"
-                        name="userNum"
-                        value="fiveUser"
-                        className="form-check-input"
-                        />
-                        5
-                    </label>
-                    </div>
-
-
-                    <label>Anonymous?</label>        
-                    <div class="form-group">
-                        <input
-                        type="checkbox"
-                        name="anon"
-                        />
-                    </div>
-                    
-
-                    <div className="form-group">
-                    <button className="btn btn-info mt-2" type="submit">
-                        Submit
-                    </button>
-                </div>
-            </form>
-
+            <div className="container">
+                <Form>
+                    <FormText>
+                        SetUp
+                    </FormText>
+                    <FormGroup>
+                        <Label for="userNum">How Many Users?</Label>
+                        <Input type="select" name="user" id="userNum">
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </Input>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="decisionNum">How Many Decision Options</Label>
+                        <Input type="select" name="decide" id="decisionNum">
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        </Input>
+                    </FormGroup>
+                    <FormGroup check>
+                        <Label check>
+                        <Input type="checkbox" />{' '}
+                        Anonymous?
+                        </Label>
+                    </FormGroup>
+                    <Button>Submit</Button>
+                </Form>
+            </div>
         )
     }
-
 }
 
 export default SetUpOptions;

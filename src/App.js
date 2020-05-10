@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/HeaderComponent'
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
-
 import Home from './pages/HomeComponent';
 import SetUp from './pages/SetUpComponent';
 import Options from './pages/OptionsComponent';
 import InputDecision from './pages/InputDecisionPageComponent';
-import Results from './pages/HomeComponent'
-
+import Results from './pages/HomeComponent';
+import Header from './components/HeaderComponent';
+import Footer from './components/FooterComponent';
 
 class App extends Component {
   render() {
@@ -35,6 +34,7 @@ class App extends Component {
               </Route>
             </Switch>
           </BrowserRouter>
+          <Footer />
         </div>
     );
   }

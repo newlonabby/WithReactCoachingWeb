@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
-import  {Form, FormGroup, Label, Input } from 'reactstrap';
-import Header from '../components/HeaderComponent';
+import  {Form, FormGroup, Label, Input, Button, Col, Row } from 'reactstrap';
 
-class InputDecision extends Component {
+class UserInputDecision extends Component {
     render(){
         return (
-            <div>
-            <Header />
+            <div className="container">
+                <UserName />
+                <RenderedDecide />
+                
+                <Button>Submit</Button>
+            </div>
+        )
+    }
+
+}
+
+function UserName(props) {
+    //only once per page
+    return (
+        <div>
             <Form>
                 <FormGroup>
                     <Label for="userName"> User Name</Label>
@@ -16,10 +28,41 @@ class InputDecision extends Component {
                     <Label></Label>
                 </FormGroup>
             </Form>
-            </div>
-        )
-    }
-
+        </div>
+    )
 }
 
-export default InputDecision;
+function RenderedDecide(props) {
+    return (
+        <div>
+           <br />
+           Text About Option
+           <br />
+            how much want?
+            <Form>
+                <FormGroup tag="fieldset" row>
+                    <FormGroup check>
+                        <Label check>
+                        <Input type="radio" name="radio2" />{' '}
+                       High
+                        </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                        <Label check>
+                        <Input type="radio" name="radio2" />{' '}
+                        Medium
+                        </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                        <Label check>
+                        <Input type="radio" name="radio2" />{' '}
+                        Low
+                        </Label>
+                    </FormGroup>
+                </FormGroup>
+            </Form>
+        </div>
+    )
+}
+
+export default UserInputDecision;

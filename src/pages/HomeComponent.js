@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
-import Header from '../components/HeaderComponent.js'
 
 class Home extends Component {
     render(){
         return (
-            <div>
-                <Header />
-                <Button color='pink'>Start</Button>
+            <div className="container">
+                <p>
+                    Welcome to Brand!
+                </p>
+                <Button type="submit">Let's Go!</Button>
             </div>
         )
     }
